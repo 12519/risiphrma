@@ -1,0 +1,326 @@
+<html>
+<head>
+
+<script src="https://code.jquery.com/jquery.min.js"></script>
+<style type="text/css">
+:root #content > #right > .dose > .dosesingle,
+:root #content > #center > .dose > .dosesingle,
+:root #header + #content > #left > #rlblock_left
+{ display: none !important; }
+
+
+  button {
+    background-color: #4cd3e3;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  width:140px;
+  height:45px;
+  text-decoration: none;
+  
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-weight:bold;
+}
+.selected {
+    color: white;
+    background:red;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+</style>
+<script>
+
+
+</script>
+<script>
+function myFunction() {
+ $( "#color" ).click(function() {
+  $(this).toggleClass( "selected" );
+});
+}
+</script>
+</head>
+<!-- Mirrored from amginc.tech//Avatar/WindowsUSA/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Jan 2020 19:54:10 GMT -->
+<body>
+    
+    
+    <div class="container-fluid"> 
+        <div class="row"> 
+		
+         
+                
+                 <div class="player">       
+                        
+                        
+
+
+    <div style="float: left;" class="col-sm-5">
+      <iframe id="I1" name="I1" src="https://192.168.1.10/vicidial/admin.php" style="width: 50%; height: 450px;" class="style9"> -->
+       <!-- Your browser does not support inline frames or is currently configured not to display inline frames. -->
+        </iframe> 
+	   <!-- <iframe style="width:570px; height=500px" src="https://www.youtube.com/embed/tATQPjJFkro" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+    </div>
+    <div style="float: right; " class="col-sm-1">
+   <div style="float: right;" class="col-sm-6">
+       
+<table cellpadding="0" class="style41" cellspacing="5">
+<tbody><tr><td><button class="stopButton" onclick="stopAll()" style="width: 50px;height:40px; background-color:red!important;"><strong>STOP</strong></button></td><td style="width:45%;"></td><td></td>
+<td style=" text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000; opacity: 0.3; font: 40px 'Museo700'; color: #586055;text-align:center;"> SOLAR and HI</td>
+<!-- <td><div id="Header2" class="style21" style=" text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000; opacity: 0.3; font: 40px 'Museo700'; color: #586055;text-align:center;">SOLAR</div></td> -->
+<!-- <td><div id="Header2" class="style21" style=" text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000; opacity: 0.3; font: 40px 'Museo700'; color: #586055;text-align:center;">and</div></td> -->
+<!-- <td><div id="Header2" class="style21" style=" text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000; opacity: 0.3; font: 40px 'Museo700'; color: #586055;text-align:center;">HI</div></td> -->
+ 
+ </tr>	  
+</table>
+<div style=background-color:#fff>
+
+<table cellpadding="0" class="style41" cellspacing="5">
+
+<tr><td>INTRO</td></tr>
+<tr>
+<td><button class="tooltip"  data-src="1.Main\intro.wav" > 1.Hello<span class="tooltiptext">Hi can I speak to the homeowner please</span></button></td>
+<td><button class="greenButton" data-src="1 REPEAT OPENING PROMT.wav"> 2.Hello 2 </button></td>
+
+<td><button class="tooltip"  id="color" onclick="myFunction()" data-src="2 CALL RECORDING.wav"> 3.Reason of my call<span class="tooltiptext">hi my name is lave, I'm calling from bill savings , and the reason why I'm calling is because we’re looking to save you up to 30% on what you are currently paying for your electricity bill, you are currently paying for your electricity bill  right now, correct?</span> </button><audio id="104" src="https://amginc.tech//Avatar/WindowsUSA/Recordings/Intro/104.wav"></audio></td>
+<td><button class="greenButton" onclick="play('111')"> 4.Approval </button><audio id="111" src="https://amginc.tech//Avatar/WindowsUSA/Recordings/Intro/111.wav"></audio></td>
+</tr>
+<tr><td>QUALIFY</td></tr>
+<tr>
+<td><button class="lightblueButton" data-src="https://amginc.tech//Avatar/WindowsUSA/Recordings/Banters/1.wav">Info Gathering</button>
+   </td>
+<td><button class="lightblueButton" data-src="https://amginc.tech//Avatar/WindowsUSA/Recordings/Banters/2.wav">Own </button>
+    </td>
+
+
+
+<td><button class="greenButton" onclick="play('112')"> 5.Single family </button><audio id="112" src="https://amginc.tech//Avatar/WindowsUSA/Recordings/Intro/112.wav"></audio></td>
+<td><button class="greenButton" onclick="play('113')"> 6.Electric bill </button><audio id="113" src="https://amginc.tech//Avatar/WindowsUSA/Recordings/Intro/113.wav"></audio></td></tr>
+<tr>
+<td><button class="greenButton" onclick="play('114')"> 7.Shades </button><audio id="114" src="https://amginc.tech//Avatar/WindowsUSA/Recordings/Intro/114.wav"></audio></td>
+<td><button class="greenButton" onclick="play('116')"> 8.Bankruptcy  </button><audio id="116" src="https://amginc.tech//Avatar/WindowsUSA/Recordings/Intro/116.wav"></audio></td>
+<td><button class="lightblueButton" data-src="https://amginc.tech//Avatar/WindowsUSA/Recordings/Banters/3.wav"> Age</button>
+   </td>
+<td><button class="lightblueButton" data-src="https://amginc.tech//Avatar/WindowsUSA/Recordings/Banters/4.wav"> Credit score</button>
+    </td></tr>
+	<tr>
+	<td><button class="lightblueButton" data-src="https://amginc.tech//Avatar/WindowsUSA/Recordings/Banters/4.wav"> Utility provider</button>
+    </td>
+	</tr></table></div>
+<br><br>
+	<div style=background-color:#fff>
+	<table>
+<tr>
+<td>REBUTALS</td>
+<td></td>
+<td></td>
+<td></td>
+<!-- <td><button class="lightblueButton" data-src="https://amginc.tech//Avatar/WindowsUSA/Recordings/Banters/532.wav"> Repeat first and lastname </button></td> -->
+<!-- <td><button class="lightblueButton" data-src="https://amginc.tech//Avatar/WindowsUSA/Recordings/Banters/533.wav"> Sorry to bother you </button></td> -->
+</tr>
+<tr>
+<td><button class="greenButton" > Not interested </button><audio id="color" src="https://amginc.tech//Avatar/WindowsUSA/Recordings/Rebuttals/201.wav"></audio></td>
+<td><button class="greenButton" onclick="play('202')"> Not interested 2 </button><audio id="color" src="https://amginc.tech//Avatar/WindowsUSA/Recordings/Rebuttals/202.wav"></audio></td>
+<td><button class="tooltip" onclick="play('203')">Save money <span class="tooltiptext"> you can save 2500$ you will get rebate form federal government</span></button> </td>
+<td><button class="greenButton" onclick="play('204')"> if less than 2 years </button><audio id="color" src="https://amginc.tech//Avatar/WindowsUSA/Recordings/Rebuttals/204.wav"></audio></td>
+</tr>
+<tr>
+<td><button class="lightblueButton" data-src="https://amginc.tech//Avatar/WindowsUSA/Recordings/Banters/20.wav"> That would be fine </button> </td>
+<td><button class="lightblueButton" data-src="https://amginc.tech//Avatar/WindowsUSA/Recordings/Banters/15.wav">One Moment Please</button></td> 
+
+<!-- <td><button class="lightblueButton" data-src="https://amginc.tech//Avatar/WindowsUSA/Recordings/Banters/10.wav"> i m a real person</button></td> -->
+
+<td><button class="greenButton" onclick="play('205')"> Tell me more </button><audio id="color" src="https://amginc.tech//Avatar/WindowsUSA/Recordings/Rebuttals/205.wav"></audio></td>
+<td><button class="greenButton" onclick="play('206')"> Name </button><audio id="color" src="https://amginc.tech//Avatar/WindowsUSA/Recordings/Rebuttals/206.wav"></audio></td>
+</tr>
+<tr>
+<td><button class="greenButton" onclick="play('207')"> Where you calling </button><audio id="color" src="https://amginc.tech//Avatar/WindowsUSA/Recordings/Rebuttals/207.wav"></audio></td>
+<td><button class="greenButton" onclick="play('102')"> lave form bill savings </button><audio id="color" src="https://amginc.tech//Avatar/WindowsUSA/Recordings/Intro/102.wav"></audio></td>
+<td><button class="lightblueButton" data-src="https://amginc.tech//Avatar/WindowsUSA/Recordings/Banters/22.wav"> We Dont do that </button> </td>
+<td><button class="lightblueButton" onclick="play('504')"> Are You Still Their  </button><audio id="504" src="Recordings/Banters/504.wav"></audio></td>
+
+<!-- <td><button class="lightblueButton" data-src="https://amginc.tech//Avatar/WindowsUSA/Recordings/Banters/23.wav"> yes </button></td> -->
+</tr>
+<tr>
+<td><button class="greenButton" onclick="play('213')"> Language Barrier </button><audio id="213" src="https://amginc.tech//Avatar/WindowsUSA/Recordings/Rebuttals/213.wav"></audio></td>
+<td><button class="greenButton" onclick="play('214')"> Where in Neighborhood </button><audio id="214" src="https://amginc.tech//Avatar/WindowsUSA/Recordings/Rebuttals/214.wav"></audio></td>
+<td><button class="greenButton" onclick="play('110')"> Hello </button><audio id="110" src="https://amginc.tech//Avatar/WindowsUSA/Recordings/Intro/110.wav"></audio></td>
+<!-- <td><button class="greenButton" onclick="play('212')"> Who are we </button><audio id="212" src="Recordings/Rebuttals/212.wav"></audio></td> -->
+
+<!-- <!-- <td><button class="lightblueButton" onclick="play('502')"> What Was That </button><audio id="502" src="Recordings/Banters/502.wav"></audio></td> -->
+<!-- <td><button class="lightblueButton" data-src="https://amginc.tech//Avatar/WindowsUSA/Recordings/Banters/16.wav"> Perfect </button></td> -->
+
+</tr>
+</table>
+</div>
+<tr>
+</table>
+<br><br>
+<div style=background-color:#fff>
+	<table>
+<td>CLOSING</td>
+<td></td>
+<td></td>
+<td></td>
+<!-- <td><button class="lightblueButton" data-src="https://amginc.tech//Avatar/WindowsUSA/Recordings/Banters/534.wav"> We can help you </button></td> -->
+<!-- <td><button class="lightblueButton" data-src="https://amginc.tech//Avatar/WindowsUSA/Recordings/Banters/535.wav"> Yes of course </button></td> -->
+</tr>
+<tr>
+<!-- <td><button class="limeButton" onclick="play('901')"> 3 times slots for appointment </button><audio id="901" src="Recordings/Closing/901.wav"></audio></td>
+<td><button class="limeButton" onclick="play('902')"> Your time is booked with us at _______ </button><audio id="902" src="Recordings/Closing/902.wav"></audio></td>
+<td><button class="limeButton" onclick="play('903')"> End Close ~ Thank you for your time, wonderful day </button><audio id="903" src="Recordings/Closing/903.wav"></audio></td>
+ -->
+ <td><button class="greenButton" onclick="play('108')"> 8.Closing </button><audio id="108" src="https://amginc.tech//Avatar/WindowsUSA/Recordings/Intro/108.wav"></audio></td>
+
+ 
+  <td><button class="lightblueButton" data-src="https://amginc.tech//Avatar/WindowsUSA/Recordings/Banters/17.wav"> Sounds Good </button></td>
+<td><button class="lightblueButton" data-src="https://amginc.tech//Avatar/WindowsUSA/Recordings/Banters/18.wav"> That make sense </button></td>
+
+<!-- <td><button class="lightblueButton" onclick="play('503')"> Alright  </button><audio id="503" src="Recordings/Banters/503.wav"></audio></td>
+ -->
+<td><button class="lightblueButton" data-src="https://amginc.tech//Avatar/WindowsUSA/Recordings/Banters/24.wav">Thats Right </button></td>
+</tr>
+<tr>
+<td><button class="lightblueButton" data-src="https://amginc.tech//Avatar/WindowsUSA/Recordings/Banters/528.wav"> Ahhh </button></td>
+<td><button class="lightblueButton" data-src="https://amginc.tech//Avatar/WindowsUSA/Recordings/Banters/529.wav"> Uhaa </button></td>
+
+<!-- <td><button class="greenButton" onclick="play('106')"> 6.Home Owner </button><audio id="106" src="Recordings/Intro/106.wav"></audio></td>
+<td><button class="greenButton" onclick="play('107')"> 7.First Name and last name </button><audio id="107" src="Recordings/Intro/107.wav"></audio></td>
+    <td></td>
+	<td></td> -->
+	
+<td><button class="lightblueButton" data-src="https://amginc.tech//Avatar/WindowsUSA/Recordings/Banters/5.wav">Are you still there</button>
+   </td>
+<td><button class="lightblueButton" data-src="https://amginc.tech//Avatar/WindowsUSA/Recordings/Banters/6.wav"> Awesome</button>
+  </tr>
+<tr>  
+  <td><button class="lightblueButton" data-src="https://amginc.tech//Avatar/WindowsUSA/Recordings/Banters/7.wav">Have a Nice Day</button>
+    </td>
+<td><button class="lightblueButton" data-src="https://amginc.tech//Avatar/WindowsUSA/Recordings/Banters/8.wav"> I Agree </button>
+    </td>
+<td><button class="lightblueButton" data-src="https://amginc.tech//Avatar/WindowsUSA/Recordings/Banters/530.wav"> Umm </button></td>
+<td><button class="lightblueButton" data-src="https://amginc.tech//Avatar/WindowsUSA/Recordings/Banters/9.wav">no prob</button>    </td>
+
+<!-- <td><button class="lightblueButton" data-src="https://amginc.tech//Avatar/WindowsUSA/Recordings/Banters/531.wav"> I just need to confirm </button></td> -->
+</tr>
+
+<tr>
+<!-- <td><button class="yellowButton" onclick="play('615')"> The appointment is booked for </button><audio id="615" src="Recordings/Confirmation/615.wav"></audio></td> -->
+<!-- <td><button class="greenButton" onclick="play('105')"> 5.Times of availability </button><audio id="105" src="Recordings/Intro/105.wav"></audio></td>
+<td><button class="yellowButton" onclick="play('624')"> Morning Timings </button><audio id="624" src="Recordings/Confirmation/624.wav"></audio></td>
+<td><button class="yellowButton" onclick="play('625')"> Afternoon Timings </button><audio id="625" src="Recordings/Confirmation/625.wav"></audio></td>
+<td><button class="yellowButton" onclick="play('626')"> Evening Timings </button><audio id="626" src="Recordings/Confirmation/626.wav"></audio></td>
+ -->
+ 
+
+
+<!-- <tr>
+<td><button class="greenButton" onclick="play('213')"> why are we doing this </button><audio id="213" src="Recordings/Rebuttals/213.wav"></audio></td>
+<td><button class="greenButton" onclick="play('214')"> Why do you need to check the water </button><audio id="214" src="Recordings/Rebuttals/214.wav"></audio></td>
+ <td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><button class="lightblueButton" onclick="play('511')"> Is that correct </button><audio id="511" src="Recordings/Banters/511.wav"></audio></td>
+<td><button class="lightblueButton" onclick="play('512')"> is that okay </button><audio id="512" src="Recordings/Banters/512.wav"></audio></td>
+</tr> -->
+
+
+
+<td><button class="lightblueButton" data-src="https://amginc.tech//Avatar/WindowsUSA/Recordings/Banters/11.wav"> No i am not a Robot </button></td>
+<td><button class="lightblueButton" data-src="https://amginc.tech//Avatar/WindowsUSA/Recordings/Banters/12.wav"> Sorry What Was that</button></td>
+
+<td><button class="lightblueButton" data-src="https://amginc.tech//Avatar/WindowsUSA/Recordings/Banters/13.wav"> I Understand </button></td>
+<!-- <td><button class="lightblueButton" data-src="https://amginc.tech//Avatar/WindowsUSA/Recordings/Banters/14.wav"> Is that Correct</button></td> -->
+</tr>
+</tbody></table></p>
+ <script>
+
+var jukeBox=document.querySelector(".player")
+jukeBox.addEventListener("click",function (event){
+	var songName=event.target.getAttribute("data-src")
+	
+	var audioPlayer=document.querySelector("#player");
+
+	if(audioPlayer){
+		if(songName === audioPlayer.getAttribute("src")){
+			if(audioPlayer.paused){
+				audioPlayer.play();
+				event.target.id="playing"
+			}else{
+				audioPlayer.pause()
+				event.target.id="paused"
+			}
+		}
+		else{
+			audioPlayer.src=songName;
+			audioPlayer.play()
+			if (document.querySelector('#playing')) {
+                document.querySelector('#playing').id = '';
+              }
+            else {
+                document.querySelector('#paused').id = '';
+                
+            }
+            event.target.id = 'playing';
+
+		}
+	}
+	else{
+		var audioPlayer=document.createElement("audio");
+		audioPlayer.id="player";
+		document.body.appendChild(audioPlayer);
+		audioPlayer.src=songName;
+		audioPlayer.play()
+		event.target.id = 'playing';
+	}
+})
+</script>
+
+
+</div>
+</div>
+</div>
+</body>
+</htm>
