@@ -1,40 +1,37 @@
 <?php
-// Define the recipient email address
-$to_email = "angadalagopiprasad@gmail.com";
+if(isset($_POST['submit'])) {
+    $to = "angadalagopiprasad@gmail.com";
+    $from = $_POST['email'];
+    $name = $_POST['name'];
+    $subject = "New Resume Submission from $name";
+    $message = "A new resume has been submitted by $name. Please find the attached resume.";
+    $file = $_FILES['resume']['tmp_name'];
+    $filename = $_FILES['resume']['name'];
+    $filetype = $_FILES['resume']['type'];
+    $filesize = $_FILES['resume']['size'];
 
-// Get the form data
-$name = $_POST['name'];
-$email = $_POST['email'];
-$message = $_POST['message'];
+    $attachment = chunk_split(base64_encode(file_get_contents($file)));
 
-// Get the resume file
-$resume_file = $_FILES['resume']['tmp_name'];
-$resume_name = $_FILES['resume']['name'];
+    $boundary = md5(time());
 
-// Set up the email headers
-$headers = "From: $name <$email>" . "\r\n";
-$headers .= "Reply-To: $email" . "\r\n";
-$headers .= "Content-Type: multipart/mixed; boundary=" . uniqid(rand(), true) . "\r\n";
-$headers .= "X-Mailer: PHP/" . phpversion();
+    $headers = "From: $from\r\n";
+    $headers .= "MIME-Version: 1.0\r\n";
+    $headers .= "Content-Type: multipart/mixed; boundary=\"$boundary\"\r\n";
 
-// Set up the email body
-$body = "--" . uniqid(rand(), true) . "\r\n";
-$body .= "Content-Type: text/plain; charset=UTF-8\r\n";
-$body .= "Content-Transfer-Encoding: 8bit\r\n\r\n";
-$body .= "Name: $name\n";
-$body .= "Email: $email\n";
-$body .= "Message:\n$message\n\n";
-$body .= "--" . uniqid(rand(), true) . "\r\n";
-$body .= "Content-Type: application/octet-stream; name=\"$resume_name\"\r\n";
-$body .= "Content-Transfer-Encoding: base64\r\n";
-$body .= "Content-Disposition: attachment; filename=\"$resume_name\"\r\n\r\n";
-$body .= chunk_split(base64_encode(file_get_contents($resume_file))) . "\r\n";
-$body .= "--" . uniqid(rand(), true) . "--";
+    $message = "--$boundary\r\n";
+    $message .= "Content-Type: text/plain; charset=\"ISO-8859-1\"\r\n";
+    $message .= "Content-Transfer-Encoding: 7bit\r\n\r\n";
+    $message .= "$message\r\n";
 
-// Send the email
-if (mail($to_email, "New Resume Submission", $body, $headers)) {
-  echo "Email sent successfully!";
-} else {
-  echo "Error sending email.";
+    $message .= "--$boundary\r\n";
+    $message .= "Content-Type: $filetype; name=\"$filename\"\r\n";
+    $message .= "Content-Transfer-Encoding: base64\r\n";
+    $message .= "Content-Disposition: attachment; filename=\"$filename\"\r\n\r\n";
+    $message .= "$attachment\r\n";
+    $message .= "--$boundary--";
+
+    mail($to, $subject, $message, $headers);
+
+    echo "Thank you for submitting your resume. We will contact you soon.";
 }
 ?>
